@@ -7,7 +7,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "npx --yes @electron/packager . OMSI2-Listen-Generator --platform=win32 --arch=x64 --out=dist --overwrite --asar --ignore=/dist",
+    "pack": "npx --yes @electron/packager . OMSI2-Listen-Generator --platform=win32 --arch=x64 --icon=build/icon.ico --out=dist --overwrite --asar --ignore=/dist",
     "dist": "electron-builder --win portable"
   },
   "devDependencies": {
@@ -17,8 +17,27 @@
   "build": {
     "appId": "de.omsi2.listengenerator",
     "productName": "OMSI 2 Listen-Generator",
-    "directories": { "output": "dist" },
-    "files": ["main.js", "preload.js", "lib.js", "renderer/**/*"],
-    "win": { "target": [{ "target": "portable", "arch": ["x64"] }], "artifactName": "OMSI2-Listen-Generator.exe" }
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "lib.js",
+      "renderer/**/*",
+      "build/icon.ico"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "OMSI2-Listen-Generator.exe",
+      "icon": "build/icon.ico"
+    }
   }
 }

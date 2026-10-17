@@ -10,6 +10,7 @@ const writeSettings = o => { try { fs.writeFileSync(settingsFile, JSON.stringify
 function createWindow() {
   win = new BrowserWindow({
     width: 1280, height: 860, minWidth: 900, minHeight: 600, show: false,
+    icon: path.join(__dirname, 'build', 'icon.ico'),
     webPreferences: { preload: path.join(__dirname, 'preload.js'), contextIsolation: true, nodeIntegration: false, sandbox: true }
   });
   win.once('ready-to-show', () => win.show());
