@@ -436,7 +436,6 @@ function realistic(){
   render(); status(t('realDone',{n:on.length}));
 }
 $('#real').onclick=realistic;
-applyLang(); setMode('cars');
 /* ---------- Einstellungen ---------- */
 const setCfg=(k,v)=>{ cfg[k]=v; omsi.setSetting(k,v); };
 function applyLook(){
@@ -494,6 +493,7 @@ $('#mixDel').onclick=()=>{
   const o=$('#mixName').dataset.orig; if(!o) return;
   const mixes={...cfg.mixes}; delete mixes[o]; setCfg('mixes',mixes); fillMixSel(); fillMixEd(); $('#mixEd').hidden=true;
 };
+applyLang(); setMode('cars');
 (async()=>{
   try{
     const st=await omsi.getSettings();
