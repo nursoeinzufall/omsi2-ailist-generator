@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
 const path = require('path');
 const fs = require('fs');
-const { scanDir, writeWithBackup } = require('./lib');
+const { scanRoots, writeWithBackup } = require('./lib');
 
 let win = null, settingsFile = '';
 const readSettings = () => { try { return JSON.parse(fs.readFileSync(settingsFile, 'utf8')); } catch (e) { return {}; } };
@@ -22,16 +22,19 @@ function createWindow() {
 ipcMain.handle('settings:get', () => readSettings());
 ipcMain.handle('settings:set', (e, k, v) => { const s = readSettings(); s[String(k)] = v; writeSettings(s); return true; });
 
-ipcMain.handle('dialog:folder', async () => {
+ipcMain.handle('dialog:folder', async (e, start) => {
   const s = readSettings();
-  const r = await dialog.showOpenDialog(win, { properties: ['openDirectory'], defaultPath: s.omsiPath || undefined });
+  const r = await dialog.showOpenDialog(win, { properties: ['openDirectory'], defaultPath: (typeof start === 'string' && start) || s.omsiPath || undefined });
   return r.canceled ? null : r.filePaths[0];
 });
 
-ipcMain.handle('omsi:scan', (e, root, dir, extSrc) => {
-  if (typeof root !== 'string' || !['vehicles', 'humans'].includes(dir)) return { error: 'noFolder' };
-  return scanDir(root, dir, new RegExp(String(extSrc), 'i'));
+ipcMain.handle('omsi:scan', (e, roots, dir, extSrc) => {
+  const list = (Array.isArray(roots) ? roots : [roots]).filter(r => typeof r === 'string' && r);
+  if (!list.length || !['vehicles', 'humans'].includes(dir)) return { error: 'noFolder' };
+  return scanRoots(list, dir, new RegExp(String(extSrc), 'i'));
 });
+
+ipcMain.handle('ui:zoom', (e, f) => { if (win) win.webContents.setZoomFactor(Math.min(2, Math.max(0.5, Number(f) || 1))); return true; });
 
 ipcMain.handle('file:open', async (e, o = {}) => {
   const s = readSettings();

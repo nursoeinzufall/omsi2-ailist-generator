@@ -11,7 +11,7 @@
 <header>
   <div class="top">
     <h1 data-t="title"></h1>
-    <label class="chk"><span data-t="lang"></span><select id="lang"></select></label>
+    <div class="tr"><button id="settingsBtn" data-t="settings"></button><label class="chk"><span data-t="lang"></span><select id="lang"></select></label></div>
   </div>
   <div class="modes" role="group">
     <button data-mode="cars" data-t="mode_cars"></button>
@@ -22,7 +22,7 @@
 </header>
 
 <div class="bar">
-  <button class="main" id="pick" data-t="pick"></button><span id="rootInfo"></span>
+  <button class="main" id="pick" data-t="rescan"></button><span id="rootInfo"></span>
   <button id="load" data-t="load"></button>
   <input type="text" id="q" size="18">
   <select id="folder"></select>
@@ -41,7 +41,7 @@
   <button id="loadSel" data-t="loadSel"></button>
   <button id="merge" data-t="merge" disabled></button>
   <button id="chk" data-t="chkBtn"></button>
-  <select id="mixSel"><option value="city" data-t="mixCity"></option><option value="rural" data-t="mixRural"></option><option value="ind" data-t="mixInd"></option></select>
+  <select id="mixSel"></select>
   <button id="real" data-t="real"></button>
 </div>
 <div id="status"></div>
@@ -50,6 +50,25 @@
 <main><div id="out" class="empty"></div></main>
 <aside id="prev" hidden><button id="prevX">✕</button><img id="prevImg" alt="" hidden><p class="cap" id="prevMsg"></p><p class="cap" id="prevCap"></p></aside>
 
+<dialog id="setDlg">
+<div class="dhead"><b data-t="setTitle"></b><button id="setX">✕</button></div>
+<h3 data-t="setFolders"></h3>
+<div class="frow"><span data-t="fOmsi"></span><code id="pOmsi"></code><button id="bOmsi" data-t="choose"></button><button id="cOmsi" data-t="clear"></button></div>
+<div class="frow"><span data-t="fOpen"></span><code id="pOpen"></code><button id="bOpen" data-t="choose"></button><button id="cOpen" data-t="clear"></button></div>
+<div class="frow"><span></span><small data-t="setHint"></small></div>
+<h3 data-t="setLook"></h3>
+<div class="frow"><span data-t="theme"></span><select id="themeSel"><option value="system" data-t="thSystem"></option><option value="light" data-t="thLight"></option><option value="dark" data-t="thDark"></option></select></div>
+<div class="frow"><span data-t="zoom"></span><input type="range" id="zoomR" min="80" max="160" step="5"><output id="zoomO"></output></div>
+<div class="frow"><span></span><label class="chk"><input type="checkbox" id="chartChk"> <span data-t="showChart"></span></label></div>
+<h3 data-t="setMix"></h3>
+<div class="frow"><select id="mixEdSel"></select><button id="mixNew" data-t="mixNew"></button></div>
+<div id="mixEd" hidden>
+  <div class="frow"><span data-t="mixName"></span><input type="text" id="mixName" size="22"></div>
+  <div id="mixSl"></div>
+  <div class="frow"><span></span><output id="mixSumO" style="text-align:left"></output></div>
+  <div class="frow"><button class="main" id="mixSave" data-t="mixSave"></button><button id="mixDel" data-t="mixDel"></button></div>
+</div>
+</dialog>
 <dialog id="grpDlg"><form method="dialog"><label><span id="grpLbl"></span><br><input type="text" id="grpIn" autocomplete="off"></label>
 <p><button class="main" value="ok">OK</button> <button value="x" formnovalidate>✕</button></p></form></dialog>
 <script src="app.js"></script>

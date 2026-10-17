@@ -51,4 +51,18 @@ function writeWithBackup(p, data) {
   return { path: p, backup: backup ? path.basename(backup) : null };
 }
 
-module.exports = { scanDir, writeWithBackup };
+// Mehrere Wurzelordner (OMSI 2 + openOMSI) scannen und die Funde zusammenführen.
+async function scanRoots(roots, dirName, ext) {
+  const files = [], imgs = new Map();
+  let found = false;
+  for (const r of roots) {
+    const res = await scanDir(r, dirName, ext);
+    if (res.error) continue;
+    found = true;
+    files.push(...res.files);
+    res.imgs.forEach(([k, a]) => imgs.set(k, [...(imgs.get(k) || []), ...a]));
+  }
+  return found ? { files, imgs: [...imgs] } : { error: 'noFolder' };
+}
+
+module.exports = { scanDir, scanRoots, writeWithBackup };
