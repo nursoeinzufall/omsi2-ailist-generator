@@ -1,0 +1,38 @@
+name: Windows-Programm bauen
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Pakete installieren
+        run: npm install
+
+      - name: Programm-Ordner bauen
+        run: npm run pack
+
+      - name: Programm-Ordner hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: OMSI2-Listen-Generator-Ordner
+          path: dist/OMSI2-Listen-Generator-win32-x64
+
+      - name: Einzelne .exe bauen (optional)
+        run: npm run dist
+        continue-on-error: true
+
+      - name: Einzelne .exe hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: OMSI2-Listen-Generator-EinzelExe
+          path: dist/OMSI2-Listen-Generator.exe
+          if-no-files-found: ignore
