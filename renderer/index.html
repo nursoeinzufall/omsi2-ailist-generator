@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' file: data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMSI 2 Listen-Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <h1 data-t="title"></h1>
+    <label class="chk"><span data-t="lang"></span><select id="lang"></select></label>
+  </div>
+  <div class="modes" role="group">
+    <button data-mode="cars" data-t="mode_cars"></button>
+    <button data-mode="park" data-t="mode_park"></button>
+    <button data-mode="hum" data-t="mode_hum"></button>
+  </div>
+  <p id="sub"></p>
+</header>
+
+<div class="bar">
+  <button class="main" id="pick" data-t="pick"></button><span id="rootInfo"></span>
+  <button id="load" data-t="load"></button>
+  <input type="text" id="q" size="18">
+  <select id="folder"></select>
+  <label class="chk" id="likelyBox"><input type="checkbox" id="onlyAi" checked> <span data-t="likely"></span></label>
+  <span class="sp"></span>
+  <button id="allVis" data-t="selVis"></button>
+  <button id="noneVis" data-t="deselVis"></button>
+  <button id="allOn" data-t="allOn"></button>
+  <button id="allOff" data-t="allOff"></button>
+  <button id="autoGrp" data-t="autoGrp"></button>
+  <button id="newGrp" data-t="newGrp"></button>
+  <button class="main" id="export" disabled data-t="export"></button>
+</div>
+<div class="bar2">
+  <button id="saveSel" data-t="saveSel"></button>
+  <button id="loadSel" data-t="loadSel"></button>
+  <button id="merge" data-t="merge" disabled></button>
+  <button id="chk" data-t="chkBtn"></button>
+  <select id="mixSel"><option value="city" data-t="mixCity"></option><option value="rural" data-t="mixRural"></option><option value="ind" data-t="mixInd"></option></select>
+  <button id="real" data-t="real"></button>
+</div>
+<div id="status"></div>
+<section id="stats" hidden></section>
+<section id="check" hidden></section>
+<main><div id="out" class="empty"></div></main>
+<aside id="prev" hidden><button id="prevX">✕</button><img id="prevImg" alt="" hidden><p class="cap" id="prevMsg"></p><p class="cap" id="prevCap"></p></aside>
+
+<dialog id="grpDlg"><form method="dialog"><label><span id="grpLbl"></span><br><input type="text" id="grpIn" autocomplete="off"></label>
+<p><button class="main" value="ok">OK</button> <button value="x" formnovalidate>✕</button></p></form></dialog>
+<script src="app.js"></script>
+</body>
+</html>

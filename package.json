@@ -1,0 +1,24 @@
+{
+  "name": "omsi2-listen-generator",
+  "productName": "OMSI 2 Listen-Generator",
+  "version": "1.0.0",
+  "description": "Listen-Generator fuer OMSI 2: KI-Autos, Parklisten, KI-Menschen",
+  "author": "OMSI Listen-Generator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "npx --yes @electron/packager . OMSI2-Listen-Generator --platform=win32 --arch=x64 --out=dist --overwrite --asar --ignore=/dist",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "de.omsi2.listengenerator",
+    "productName": "OMSI 2 Listen-Generator",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "preload.js", "lib.js", "renderer/**/*"],
+    "win": { "target": [{ "target": "portable", "arch": ["x64"] }], "artifactName": "OMSI2-Listen-Generator.exe" }
+  }
+}
