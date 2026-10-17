@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest
@@ -36,3 +39,13 @@ jobs:
           name: OMSI2-Listen-Generator-EinzelExe
           path: dist/OMSI2-Listen-Generator.exe
           if-no-files-found: ignore
+
+      - name: Release erstellen
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          Compress-Archive -Path "dist/OMSI2-Listen-Generator-win32-x64" -DestinationPath "dist/OMSI2-Listen-Generator-Ordner.zip"
+          $files = @("dist/OMSI2-Listen-Generator-Ordner.zip")
+          if (Test-Path "dist/OMSI2-Listen-Generator.exe") { $files += "dist/OMSI2-Listen-Generator.exe" }
+          gh release create "v1.0.${{ github.run_number }}" $files --target "${{ github.sha }}" --title "Version 1.0.${{ github.run_number }}" --notes "Automatisch gebaut. Download: Programm-Ordner (Zip) oder Einzel-EXE."
