@@ -7,7 +7,7 @@ const L = {
   sub_cars:'Hake KI-Fahrzeuge an, ordne sie Gruppen zu und exportiere eine fertige ailists.cfg (UTF-16, wie OMSI sie erwartet).',
   sub_park:'Hake geparkte Fahrzeuge (.sco) an. Die Anzahl bestimmt, wie oft die Zeile in der Liste steht (mehrfache Einträge wie in deiner Vorlage).',
   sub_hum:'Hake KI-Menschen (.hum) an und exportiere die Liste als Textdatei. Die Anzahl bestimmt, wie oft die Zeile vorkommt.',
-  chkBtn:'Liste prüfen',chkOk:'Keine Probleme gefunden.',chkSum:'{e} Fehler, {w} Warnungen, {i} Hinweise',chkNoScan:'Der Ordner wurde noch nicht gescannt, fehlende Dateien können nicht erkannt werden.',real:'Menge realistisch verteilen',mixCity:'Stadtverkehr',mixRural:'Landstraße',mixInd:'Gewerbegebiet',realConfirm:'Die Häufigkeiten aller angehakten Fahrzeuge werden nach groben Richtwerten typischer Verkehrsmischungen überschrieben (Gruppen werden vorher nach Möglichkeit automatisch zugeordnet). Fortfahren?',realDone:'{n} Häufigkeiten gesetzt. Du kannst sie danach von Hand anpassen.',iStrayEnd:'Zeile {l}: [end] ohne passenden Gruppenanfang.',iNoEnd:'Zeile {l}: Gruppe „{g}“ hat kein [end].',iNoName:'Zeile {l}: Gruppenname fehlt.',iDupGrp:'Zeile {l}: Gruppenname „{g}“ kommt mehrfach vor.',iEmptyGrp:'Zeile {l}: Gruppe „{g}“ ist leer.',iBadExt:'Zeile {l}: unbekannter Dateityp: {p}',iSlash:'Zeile {l}: „/“ statt „\\“ im Pfad (wird beim Export korrigiert).',iSpace:'Zeile {l}: Leerzeichen statt Tab vor der Häufigkeit (wird beim Export korrigiert).',iFreq:'Zeile {l}: ungültige Häufigkeit „{f}“.',iDupIn:'Zeile {l}: {p} steht doppelt in Gruppe „{g}“.',iMultiGrp:'{p} steht in mehreren Gruppen: {g}.',iPrefix:'Zeile {l}: Pfad beginnt nicht mit „{d}\\“.',iMissing:'Nicht im Ordner: {p}',iSameName:'Gleicher Dateiname in mehreren Ordnern: {p}',settings:'⚙ Einstellungen',setTitle:'Einstellungen',setFolders:'Ordner',setHint:'Beide Ordner werden gescannt und die Funde zusammengeführt. Ein Fahrzeug, das in beiden vorkommt, erscheint nur einmal.',fOmsi:'OMSI-2-Ordner',fOpen:'openOMSI-Ordner (zweites Verzeichnis)',choose:'Wählen …',clear:'Entfernen',notSet:'(nicht festgelegt)',setLook:'Darstellung',theme:'Farbschema',thSystem:'Wie Windows',thLight:'Hell',thDark:'Dunkel',zoom:'Schrift / Zoom',showChart:'Diagramm und Anteile pro Fahrzeug anzeigen',setMix:'Eigene Verkehrsmischungen',mixNew:'Neue Mischung',mixName:'Name',mixSave:'Speichern',mixDel:'Löschen',mixSum:'Summe: {s} % (wird auf 100 % umgerechnet)',mixPick:'Mischung bearbeiten …',rescan:'Neu scannen',noRoot:'Noch kein Ordner festgelegt. Öffne die Einstellungen (⚙).',saveSel:'Auswahl speichern',loadSel:'Auswahl laden',merge:'In geladene ailists.cfg einfügen (mit Backup)',thCnt:'Fahrzeuge',thSum:'Summe Häufigkeit',thShare:'Anteil',warnMissing:'{n} angehakte Einträge liegen nicht im Ordner.',rmMissing:'Fehlende Einträge entfernen',warnDup:'{n} doppelte Einträge in der geladenen Datei wurden zusammengeführt.',statsLine:'{n} Einträge angehakt, Gesamthäufigkeit {f}',selSaved:'{n} Einträge gespeichert.',selLoaded:'{n} Einträge geladen.',selBad:'Das ist keine gültige Auswahl-Datei.',mergeDone:'{f} geschrieben. Backup der alten Datei: {b}',allOn:'Alle anhaken',allOff:'Alle abwählen',autoGrp:'Gruppen automatisch verteilen',autoDone:'{n} Fahrzeuge verteilt. Manuell geänderte Gruppen bleiben unverändert.',allFolders:'Alle Ordner',rootFolder:'(Hauptordner)',prevNone:'Keine Vorschau gefunden',close:'Schließen',pick:'OMSI-2-Ordner wählen',load:'Bestehende Liste laden',filter:'Filtern …',likely:'nur wahrscheinliche Treffer',selVis:'Sichtbare anhaken',deselVis:'Sichtbare abwählen',newGrp:'Neue Gruppe',export:'Exportieren',
+  chkBtn:'Liste prüfen',chkOk:'Keine Probleme gefunden.',chkSum:'{e} Fehler, {w} Warnungen, {i} Hinweise',chkNoScan:'Der Ordner wurde noch nicht gescannt, fehlende Dateien können nicht erkannt werden.',real:'Menge realistisch verteilen',mixCity:'Stadtverkehr',mixRural:'Landstraße',mixInd:'Gewerbegebiet',realConfirm:'Die Häufigkeiten aller angehakten Fahrzeuge werden nach groben Richtwerten typischer Verkehrsmischungen überschrieben (Gruppen werden vorher nach Möglichkeit automatisch zugeordnet). Fortfahren?',realDone:'{n} Häufigkeiten gesetzt. Du kannst sie danach von Hand anpassen.',iStrayEnd:'Zeile {l}: [end] ohne passenden Gruppenanfang.',iNoEnd:'Zeile {l}: Gruppe „{g}“ hat kein [end].',iNoName:'Zeile {l}: Gruppenname fehlt.',iDupGrp:'Zeile {l}: Gruppenname „{g}“ kommt mehrfach vor.',iEmptyGrp:'Zeile {l}: Gruppe „{g}“ ist leer.',iBadExt:'Zeile {l}: unbekannter Dateityp: {p}',iSlash:'Zeile {l}: „/“ statt „\\“ im Pfad (wird beim Export korrigiert).',iSpace:'Zeile {l}: Leerzeichen statt Tab vor der Häufigkeit (wird beim Export korrigiert).',iFreq:'Zeile {l}: ungültige Häufigkeit „{f}“.',iDupIn:'Zeile {l}: {p} steht doppelt in Gruppe „{g}“.',iMultiGrp:'{p} steht in mehreren Gruppen: {g}.',iPrefix:'Zeile {l}: Pfad beginnt nicht mit „{d}\\“.',iMissing:'Nicht im Ordner: {p}',iSameName:'Gleicher Dateiname in mehreren Ordnern: {p}',settings:'⚙ Einstellungen',setTitle:'Einstellungen',setFolders:'Ordner',setHint:'Beide Ordner werden gescannt und die Funde zusammengeführt. Ein Fahrzeug, das in beiden vorkommt, erscheint nur einmal.',fOmsi:'OMSI-2-Ordner',fOpen:'openOMSI-Ordner (zweites Verzeichnis)',choose:'Wählen …',clear:'Entfernen',notSet:'(nicht festgelegt)',setLook:'Darstellung',theme:'Farbschema',thSystem:'Wie Windows',thLight:'Hell',thDark:'Dunkel',zoom:'Schrift / Zoom',showChart:'Diagramm und Anteile pro Fahrzeug anzeigen',setMix:'Eigene Verkehrsmischungen',mixNew:'Neue Mischung',mixName:'Name',mixSave:'Speichern',mixDel:'Löschen',mixSum:'Summe: {s} % (wird auf 100 % umgerechnet)',mixPick:'Mischung bearbeiten …',rescan:'Neu scannen',noRoot:'Noch kein Ordner festgelegt. Öffne die Einstellungen (⚙).',fmLbl:'Häufigkeit:',fmNum:'Zahlen',fmPct:'Prozent',freqMode:'Häufigkeiten eingeben als',thSoll:'Soll %',thCustom:'Eigene Farben',colPreset:'Vorlage',prePick:'Vorlage wählen …',preDark:'Standard dunkel',preLight:'Standard hell',preYellow:'Bus-Gelb',preContrast:'Hochkontrast',preGreen:'Grün',colReset:'Zurücksetzen',colBg:'Hintergrund',colPanel:'Flächen',colInk:'Text',colMute:'Text (gedämpft)',colLine:'Linien',colAcc:'Akzent (Knöpfe, Balken)',colWarn:'Warnfarbe',colOk:'Kontrast Text/Hintergrund: {c}:1 – gut lesbar.',colLow:'Achtung: wenig Kontrast zwischen Text und Hintergrund ({c}:1). Lesbar ab etwa 4,5:1.',setData:'Daten',expSet:'Einstellungen exportieren',impSet:'Einstellungen importieren',setExported:'Einstellungen exportiert.',setImported:'Einstellungen importiert.',setBad:'Das ist keine gültige Einstellungs-Datei.',clrCache:'Zwischenspeicher leeren und neu scannen',cacheNote:'Zwischenspeicher: {c} von {n} Ordnern unverändert.',info:'ⓘ Info',infoTitle:'Über dieses Programm',infoVer:'Version {v}',infoGuideH:'Kurzanleitung',infoLogH:'Letzte Änderungen',infoBy:'Gemacht von NurSoEinZufall und Claude.',infoGuide:'Ordner festlegen: ⚙ Einstellungen → OMSI-2-Ordner (optional zusätzlich openOMSI).|Modus wählen: KI-Autos, Parklisten oder KI-Menschen.|Fahrzeuge anhaken, Gruppen (bis zu 3) und Häufigkeiten festlegen. Mit „Prozent“ legst du stattdessen Wahrscheinlichkeiten in % fest.|„Liste prüfen“ zeigt Fehler und Warnungen, „Menge realistisch verteilen“ setzt typische Verkehrsmischungen.|Speichern: „Exportieren“ oder „In geladene ailists.cfg einfügen“ (mit automatischem Backup).',infoLog:'Eigene Farben, Prozent-Modus, Häufigkeit pro Gruppe, Einstellungen sichern/laden, Scan-Zwischenspeicher, Info-Fenster und neues Icon.|Einstellungsmenü, zweites Verzeichnis (openOMSI), eigene Verkehrsmischungen, Diagramm, Hell/Dunkel und Zoom.|Listenprüfung, bis zu 3 Gruppen pro Fahrzeug, Auswahl speichern/laden.',saveSel:'Auswahl speichern',loadSel:'Auswahl laden',merge:'In geladene ailists.cfg einfügen (mit Backup)',thCnt:'Fahrzeuge',thSum:'Summe Häufigkeit',thShare:'Anteil',warnMissing:'{n} angehakte Einträge liegen nicht im Ordner.',rmMissing:'Fehlende Einträge entfernen',warnDup:'{n} doppelte Einträge in der geladenen Datei wurden zusammengeführt.',statsLine:'{n} Einträge angehakt, Gesamthäufigkeit {f}',selSaved:'{n} Einträge gespeichert.',selLoaded:'{n} Einträge geladen.',selBad:'Das ist keine gültige Auswahl-Datei.',mergeDone:'{f} geschrieben. Backup der alten Datei: {b}',allOn:'Alle anhaken',allOff:'Alle abwählen',autoGrp:'Gruppen automatisch verteilen',autoDone:'{n} Fahrzeuge verteilt. Manuell geänderte Gruppen bleiben unverändert.',allFolders:'Alle Ordner',rootFolder:'(Hauptordner)',prevNone:'Keine Vorschau gefunden',close:'Schließen',pick:'OMSI-2-Ordner wählen',load:'Bestehende Liste laden',filter:'Filtern …',likely:'nur wahrscheinliche Treffer',selVis:'Sichtbare anhaken',deselVis:'Sichtbare abwählen',newGrp:'Neue Gruppe',export:'Exportieren',
   idle:'Noch nichts geladen.',empty:'Wähle den OMSI-2-Hauptordner (oder direkt den passenden Unterordner). Der Ordner wird nur gelesen, nichts wird verändert.',
   scanning:'Scanne …',found:'{n} gefunden, {v} angezeigt, {c} angehakt.',noFolder:'Ordner „{d}“ nicht gefunden. Bitte den OMSI-2-Hauptordner wählen.',noFiles:'Keine passenden Dateien gefunden.',
   err:'Fehler: {m}',loaded:'{n} Einträge übernommen.',noEntries:'Keine passenden Einträge in dieser Datei gefunden.',exported:'{f} gespeichert.',backupNote:' Backup der alten Datei: {b}',
@@ -16,7 +16,7 @@ const L = {
   sub_cars:'Tick AI vehicles, assign them to groups and export a ready-made ailists.cfg (UTF-16, as OMSI expects it).',
   sub_park:'Tick parked vehicles (.sco). The count sets how often the line appears in the list (repeated entries, as in your template).',
   sub_hum:'Tick AI pedestrians (.hum) and export the list as a text file. The count sets how often the line appears.',
-  chkBtn:'Check list',chkOk:'No problems found.',chkSum:'{e} errors, {w} warnings, {i} notes',chkNoScan:'The folder has not been scanned yet, so missing files cannot be detected.',real:'Distribute quantities realistically',mixCity:'City traffic',mixRural:'Rural road',mixInd:'Industrial area',realConfirm:'The frequencies of all ticked vehicles will be overwritten using rough reference values for typical traffic mixes (groups are assigned automatically first where possible). Continue?',realDone:'{n} frequencies set. You can adjust them by hand afterwards.',iStrayEnd:'Line {l}: [end] without a matching group start.',iNoEnd:'Line {l}: group \"{g}\" has no [end].',iNoName:'Line {l}: group name missing.',iDupGrp:'Line {l}: group name \"{g}\" appears more than once.',iEmptyGrp:'Line {l}: group \"{g}\" is empty.',iBadExt:'Line {l}: unknown file type: {p}',iSlash:'Line {l}: \"/\" instead of \"\\\\\" in the path (corrected on export).',iSpace:'Line {l}: space instead of tab before the frequency (corrected on export).',iFreq:'Line {l}: invalid frequency \"{f}\".',iDupIn:'Line {l}: {p} appears twice in group \"{g}\".',iMultiGrp:'{p} is in several groups: {g}.',iPrefix:'Line {l}: path does not start with \"{d}\\\\\".',iMissing:'Not in folder: {p}',iSameName:'Same file name in several folders: {p}',settings:'⚙ Settings',setTitle:'Settings',setFolders:'Folders',setHint:'Both folders are scanned and the results merged. A vehicle found in both appears only once.',fOmsi:'OMSI 2 folder',fOpen:'openOMSI folder (second directory)',choose:'Choose …',clear:'Remove',notSet:'(not set)',setLook:'Appearance',theme:'Color scheme',thSystem:'Like Windows',thLight:'Light',thDark:'Dark',zoom:'Text size / zoom',showChart:'Show chart and share per vehicle',setMix:'Custom traffic mixes',mixNew:'New mix',mixName:'Name',mixSave:'Save',mixDel:'Delete',mixSum:'Total: {s} % (scaled to 100 %)',mixPick:'Edit mix …',rescan:'Rescan',noRoot:'No folder set yet. Open the settings (⚙).',saveSel:'Save selection',loadSel:'Load selection',merge:'Merge into loaded ailists.cfg (with backup)',thCnt:'Vehicles',thSum:'Total frequency',thShare:'Share',warnMissing:'{n} ticked entries are not in the folder.',rmMissing:'Remove missing entries',warnDup:'{n} duplicate entries in the loaded file were merged.',statsLine:'{n} entries ticked, total frequency {f}',selSaved:'{n} entries saved.',selLoaded:'{n} entries loaded.',selBad:'This is not a valid selection file.',mergeDone:'{f} written. Backup of the old file: {b}',allOn:'Tick all',allOff:'Untick all',autoGrp:'Distribute groups automatically',autoDone:'{n} vehicles distributed. Groups you changed manually stay as they are.',allFolders:'All folders',rootFolder:'(main folder)',prevNone:'No preview found',close:'Close',pick:'Choose OMSI 2 folder',load:'Load existing list',filter:'Filter …',likely:'likely matches only',selVis:'Tick visible',deselVis:'Untick visible',newGrp:'New group',export:'Export',
+  chkBtn:'Check list',chkOk:'No problems found.',chkSum:'{e} errors, {w} warnings, {i} notes',chkNoScan:'The folder has not been scanned yet, so missing files cannot be detected.',real:'Distribute quantities realistically',mixCity:'City traffic',mixRural:'Rural road',mixInd:'Industrial area',realConfirm:'The frequencies of all ticked vehicles will be overwritten using rough reference values for typical traffic mixes (groups are assigned automatically first where possible). Continue?',realDone:'{n} frequencies set. You can adjust them by hand afterwards.',iStrayEnd:'Line {l}: [end] without a matching group start.',iNoEnd:'Line {l}: group \"{g}\" has no [end].',iNoName:'Line {l}: group name missing.',iDupGrp:'Line {l}: group name \"{g}\" appears more than once.',iEmptyGrp:'Line {l}: group \"{g}\" is empty.',iBadExt:'Line {l}: unknown file type: {p}',iSlash:'Line {l}: \"/\" instead of \"\\\\\" in the path (corrected on export).',iSpace:'Line {l}: space instead of tab before the frequency (corrected on export).',iFreq:'Line {l}: invalid frequency \"{f}\".',iDupIn:'Line {l}: {p} appears twice in group \"{g}\".',iMultiGrp:'{p} is in several groups: {g}.',iPrefix:'Line {l}: path does not start with \"{d}\\\\\".',iMissing:'Not in folder: {p}',iSameName:'Same file name in several folders: {p}',settings:'⚙ Settings',setTitle:'Settings',setFolders:'Folders',setHint:'Both folders are scanned and the results merged. A vehicle found in both appears only once.',fOmsi:'OMSI 2 folder',fOpen:'openOMSI folder (second directory)',choose:'Choose …',clear:'Remove',notSet:'(not set)',setLook:'Appearance',theme:'Color scheme',thSystem:'Like Windows',thLight:'Light',thDark:'Dark',zoom:'Text size / zoom',showChart:'Show chart and share per vehicle',setMix:'Custom traffic mixes',mixNew:'New mix',mixName:'Name',mixSave:'Save',mixDel:'Delete',mixSum:'Total: {s} % (scaled to 100 %)',mixPick:'Edit mix …',rescan:'Rescan',noRoot:'No folder set yet. Open the settings (⚙).',fmLbl:'Frequency:',fmNum:'Numbers',fmPct:'Percent',freqMode:'Enter frequencies as',thSoll:'Target %',thCustom:'Custom colors',colPreset:'Preset',prePick:'Choose preset …',preDark:'Default dark',preLight:'Default light',preYellow:'Bus yellow',preContrast:'High contrast',preGreen:'Green',colReset:'Reset',colBg:'Background',colPanel:'Panels',colInk:'Text',colMute:'Text (muted)',colLine:'Lines',colAcc:'Accent (buttons, bars)',colWarn:'Warning color',colOk:'Text/background contrast: {c}:1 – easy to read.',colLow:'Warning: low contrast between text and background ({c}:1). Readable from about 4.5:1.',setData:'Data',expSet:'Export settings',impSet:'Import settings',setExported:'Settings exported.',setImported:'Settings imported.',setBad:'This is not a valid settings file.',clrCache:'Clear cache and rescan',cacheNote:'Cache: {c} of {n} folders unchanged.',info:'ⓘ Info',infoTitle:'About this program',infoVer:'Version {v}',infoGuideH:'Quick guide',infoLogH:'Recent changes',infoBy:'Made by NurSoEinZufall and Claude.',infoGuide:'Set folders: ⚙ Settings → OMSI 2 folder (optionally openOMSI as well).|Choose a mode: AI cars, parking lists or AI pedestrians.|Tick vehicles, set groups (up to 3) and frequencies. With “Percent” you set probabilities in % instead.|“Check list” shows errors and warnings, “Distribute quantities realistically” applies typical traffic mixes.|Save: “Export” or “Merge into loaded ailists.cfg” (with automatic backup).',infoLog:'Custom colors, percent mode, frequency per group, export/import settings, scan cache, info window and new icon.|Settings menu, second directory (openOMSI), custom traffic mixes, chart, light/dark and zoom.|List check, up to 3 groups per vehicle, save/load selection.',saveSel:'Save selection',loadSel:'Load selection',merge:'Merge into loaded ailists.cfg (with backup)',thCnt:'Vehicles',thSum:'Total frequency',thShare:'Share',warnMissing:'{n} ticked entries are not in the folder.',rmMissing:'Remove missing entries',warnDup:'{n} duplicate entries in the loaded file were merged.',statsLine:'{n} entries ticked, total frequency {f}',selSaved:'{n} entries saved.',selLoaded:'{n} entries loaded.',selBad:'This is not a valid selection file.',mergeDone:'{f} written. Backup of the old file: {b}',allOn:'Tick all',allOff:'Untick all',autoGrp:'Distribute groups automatically',autoDone:'{n} vehicles distributed. Groups you changed manually stay as they are.',allFolders:'All folders',rootFolder:'(main folder)',prevNone:'No preview found',close:'Close',pick:'Choose OMSI 2 folder',load:'Load existing list',filter:'Filter …',likely:'likely matches only',selVis:'Tick visible',deselVis:'Untick visible',newGrp:'New group',export:'Export',
   idle:'Nothing loaded yet.',empty:'Choose the OMSI 2 main folder (or the matching subfolder directly). The folder is only read, nothing is changed.',
   scanning:'Scanning …',found:'{n} found, {v} shown, {c} ticked.',noFolder:'Folder "{d}" not found. Please choose the OMSI 2 main folder.',noFiles:'No matching files found.',
   err:'Error: {m}',loaded:'{n} entries imported.',noEntries:'No matching entries found in this file.',exported:'{f} saved.',backupNote:' Backup of the old file: {b}',
@@ -55,12 +55,14 @@ const MODES={
 const S={cars:{items:[]},park:{items:[]},hum:{items:[]}};
 let mode='cars'; const RAW={};
 const roots={omsi:'',open:''}, rootList=()=>[roots.omsi,roots.open].filter(Boolean);
-let cfg={theme:'system',zoom:100,showChart:true,mixes:{}};
+let cfg={theme:'system',zoom:100,showChart:true,mixes:{},colors:{},freqMode:'num',gp:{}};
 const IMGS=new Map(), IMG=/\.(jpe?g|png|bmp|gif|webp)$/i;
 let folderSel='', selPath='', prevUrl=null, origCfg=null;
 const folderOf=p=>p.split('\\').slice(1,-1).join('\\')||'.';
 const cur=()=>S[mode].items;
-const gl=i=>[...new Set([i.group,i.group2,i.group3].filter(Boolean))];
+const slots=i=>{ const o=[],seen=new Set(); [[i.group,i.freq],[i.group2,i.freq2??i.freq],[i.group3,i.freq3??i.freq]].forEach(([g,f])=>{ if(g&&!seen.has(g)){ seen.add(g); o.push({g,f}); } }); return o; };
+const gl=i=>slots(i).map(s=>s.g);
+const FK=['freq','freq2','freq3'];
 const OPT0='<option value="">—</option>';
 function status(x,err){const s=$('#status');s.textContent=x;s.className=err?'err':'';}
 
@@ -78,9 +80,9 @@ async function scan(m){
   status(t('scanning'));
   try{
     const r=await omsi.scan(rl,c.dir,c.ext.source);
-    if(r.error) return status(t('noFolder',{d:c.dir}),true);
+    if(r.error){ $('#prog').hidden=true; return status(t('noFolder',{d:c.dir}),true); }
     r.imgs.forEach(([k,a])=>{ const l=IMGS.get(k)||[]; a.forEach(x=>{ if(!l.some(y=>y.name===x.name)) l.push(x); }); IMGS.set(k,l); });
-    setScan(m,r.files); render();
+    setScan(m,r.files); $('#prog').hidden=true; $('#scanInfo').textContent=r.stats?t('cacheNote',{c:r.stats.cached,n:r.stats.total}):''; render();
   }catch(e){ status(t('err',{m:e.message}),true); }
 }
 function resetScans(){ for(const m in S) S[m].scanned=false; IMGS.clear(); }
@@ -117,8 +119,10 @@ function applyEntries(entries){
   entries.forEach(e=>{
     if(mode==='cars'&&!groups.includes(e.group)) groups.push(e.group);
     const it=items.find(x=>x.path.toLowerCase()===e.path.toLowerCase());
-    if(it&&mode==='cars'&&seen.has(it)){ if(!gl(it).includes(e.group)){ if(!it.group2) it.group2=e.group; else if(!it.group3) it.group3=e.group; } }
-    else if(it){ it.on=true; it.group=e.group; it.group2=''; it.group3=''; it.freq=e.freq; it.manual=true; seen.add(it); }
+    if(it&&mode==='cars'&&seen.has(it)){
+      if(!gl(it).includes(e.group)){ if(!it.group2){ it.group2=e.group; it.freq2=e.freq; } else if(!it.group3){ it.group3=e.group; it.freq3=e.freq; } }
+    }
+    else if(it){ it.on=true; it.group=e.group; it.group2=''; it.group3=''; it.freq=e.freq; it.freq2=it.freq3=undefined; it.manual=true; seen.add(it); }
     else{ const n={path:e.path,on:true,group:e.group,freq:e.freq,missing:!!S[mode].scanned,manual:true}; items.push(n); seen.add(n); }
   });
   render(); status(t('loaded',{n:entries.length}));
@@ -137,11 +141,11 @@ function fillFolders(){
   $('#folder').innerHTML=`<option value="">${t('allFolders')} (${[...m.values()].reduce((a,b)=>a+b,0)})</option>`+
     [...m].sort((a,b)=>a[0].localeCompare(b[0],'de')).map(([f,n])=>`<option value="${esc(f)}"${f===folderSel?' selected':''}>${esc(f==='.'?t('rootFolder'):f)} (${n})</option>`).join('');
 }
-function render(){ fillFolders();
+function render(){ fillFolders(); if(mode==='cars'&&cfg.freqMode==='pct') applyPercent();
   const items=cur(), n=items.filter(i=>i.on).length;
   syncBtns();
   if(!items.length){ $('#out').className='empty'; $('#out').textContent=t('empty'); status(t(S[mode].scanned?'noFiles':'idle')); return; }
-  const v=visible(), cars=mode==='cars';
+  const v=visible(), cars=mode==='cars', ro=(cars&&cfg.freqMode==='pct')?' readonly':'';
   status(t('found',{n:items.length,v:v.length,c:n}));
   const opts=sel=>groups.map(g=>`<option${g===sel?' selected':''}>${esc(g)}</option>`).join('');
   $('#out').className='';
@@ -149,17 +153,57 @@ function render(){ fillFolders();
     v.map(({it,i})=>`<tr class="${(it.on?'on':'')+(it.path===selPath?' sel':'')}" data-i="${i}"><td><input type="checkbox" class="c"${it.on?' checked':''}></td>
       <td class="path">${esc(it.path)}${it.missing?`<span class="tag w">${t('missing')}</span>`:''}${cars&&/\.ovh$/i.test(it.path)?'<span class="tag">ovh</span>':''}</td>
       ${cars?`<td class="grp"><select class="g">${opts(it.group)}</select><select class="g2">${OPT0}${opts(it.group2)}</select><select class="g3">${OPT0}${opts(it.group3)}</select></td>`:''}
-      <td class="num"><input type="number" class="f" min="1" max="999" value="${it.freq}"></td><td class="sh"></td></tr>`).join('')+'</tbody></table>'; updShares();
+      <td class="num"><input type="number" class="f" min="1" max="999" value="${it.freq}"${ro}>${cars?`<input type="number" class="f2" min="1" max="999" value="${it.freq2??it.freq}" title="${esc(it.group2||'')}"${it.group2?'':' hidden'}${ro}><input type="number" class="f3" min="1" max="999" value="${it.freq3??it.freq}" title="${esc(it.group3||'')}"${it.group3?'':' hidden'}${ro}>`:''}</td><td class="sh"><span class="shv"></span>${cars?'<input type="number" class="vp" min="0" max="100" step="0.5">':''}</td></tr>`).join('')+'</tbody></table>'; updShares();
 }
+/* ---------- Prozent-Modus ---------- */
+function groupPcts(l){
+  const fixed=l.filter(i=>i.w!==undefined), free=l.filter(i=>i.w===undefined), sum=fixed.reduce((a,i)=>a+i.w,0), res=new Map();
+  const sc=sum>100?100/sum:1, rest=Math.max(0,100-sum*sc);
+  fixed.forEach(i=>res.set(i,i.w*sc)); free.forEach(i=>res.set(i,rest/free.length));
+  return res;
+}
+function vehPcts(on){ const res=new Map(); [...new Set(on.map(i=>i.group))].forEach(g=>groupPcts(on.filter(i=>i.group===g)).forEach((v,k)=>res.set(k,v))); return res; }
+function gpVals(gs){
+  const gp=cfg.gp||{}, given=gs.filter(g=>gp[g]!==undefined), free=gs.filter(g=>gp[g]===undefined), sum=given.reduce((a,g)=>a+gp[g],0), rest=Math.max(0,100-sum)/Math.max(1,free.length), o={};
+  gs.forEach(g=>o[g]=gp[g]!==undefined?gp[g]:Math.round(rest*10)/10); return o;
+}
+function applyPercent(){
+  const on=cur().filter(i=>i.on); if(!on.length) return;
+  const entries=[]; on.forEach(i=>slots(i).forEach((s,k)=>entries.push({it:i,k,group:s.g,path:i.path})));
+  const gs=[...new Set(entries.map(e=>e.group))], mix=gpVals(gs), pc=new Map();
+  gs.forEach(g=>pc.set(g,groupPcts(on.filter(i=>gl(i).includes(g)))));
+  allocate(entries,mix,e=>pc.get(e.group).get(e.it)).forEach((v,e)=>{ e.it[FK[e.k]]=v; });
+}
+function syncRows(){
+  const items=cur(), cars=mode==='cars', pct=cars&&cfg.freqMode==='pct', ae=document.activeElement, vm=pct?vehPcts(items.filter(i=>i.on)):null;
+  document.querySelectorAll('#out tbody tr').forEach(tr=>{
+    const it=items[+tr.dataset.i]; if(!it) return;
+    FK.forEach((k,n)=>{ const el=tr.querySelector('.f'+(n?n+1:'')); if(el&&el!==ae){ el.value=it[k]??it.freq; el.readOnly=pct; } });
+    const vp=tr.querySelector('.vp'); if(vp&&vp!==ae) vp.value=(pct&&it.on&&vm.has(it))?vm.get(it).toFixed(1):'';
+  });
+}
+function afterEdit(){ if(mode==='cars'&&cfg.freqMode==='pct') applyPercent(); syncRows(); syncBtns(); }
 $('#out').addEventListener('input',e=>{
-  const tr=e.target.closest('tr'); if(!tr) return; const it=cur()[+tr.dataset.i];
-  if(e.target.classList.contains('c')){ it.on=e.target.checked; tr.classList.toggle('on',it.on);
-    const n=cur().filter(i=>i.on).length; syncBtns(); status(t('found',{n:cur().length,v:visible().length,c:n})); }
-  else if(e.target.classList.contains('g')){ it.group=e.target.value; it.manual=true; }
-  else if(e.target.classList.contains('g2')){ it.group2=e.target.value; it.manual=true; }
-  else if(e.target.classList.contains('g3')){ it.group3=e.target.value; it.manual=true; }
-  else if(e.target.classList.contains('f')) it.freq=Math.max(1,parseInt(e.target.value)||1);
-  renderStats();
+  const tr=e.target.closest('tr'); if(!tr) return; const it=cur()[+tr.dataset.i], c=e.target.classList, num=()=>Math.max(1,parseInt(e.target.value)||1);
+  if(c.contains('c')){ it.on=e.target.checked; tr.classList.toggle('on',it.on); status(t('found',{n:cur().length,v:visible().length,c:cur().filter(i=>i.on).length})); }
+  else if(c.contains('g')){ it.group=e.target.value; it.manual=true; }
+  else if(c.contains('g2')){ it.group2=e.target.value; it.manual=true; tr.querySelector('.f2').hidden=!it.group2; }
+  else if(c.contains('g3')){ it.group3=e.target.value; it.manual=true; tr.querySelector('.f3').hidden=!it.group3; }
+  else if(c.contains('f')) it.freq=num();
+  else if(c.contains('f2')) it.freq2=num();
+  else if(c.contains('f3')) it.freq3=num();
+  else return;
+  afterEdit();
+});
+$('#out').addEventListener('change',e=>{
+  if(!e.target.classList.contains('vp')) return;
+  const it=cur()[+e.target.closest('tr').dataset.i], v=parseFloat(e.target.value);
+  it.w=(isNaN(v)||v<0)?undefined:Math.min(100,v); afterEdit();
+});
+$('#stats').addEventListener('change',e=>{
+  if(!e.target.classList.contains('gp')) return;
+  const v=parseFloat(e.target.value); if(isNaN(v)||v<0) return;
+  setCfg('gp',{...(cfg.gp||{}),[e.target.dataset.g]:Math.min(100,v)}); afterEdit();
 });
 
 /* ---------- Export ---------- */
@@ -168,7 +212,7 @@ function build(){
   if(mode==='cars'){
     groups.forEach(g=>{
       const list=cur().filter(i=>i.on&&gl(i).includes(g)); if(!list.length) return;
-      out.push('[aigroup_2]',g,''); list.forEach(i=>out.push(i.path+'\t'+i.freq)); out.push('[end]','');
+      out.push('[aigroup_2]',g,''); list.forEach(i=>out.push(i.path+'\t'+slots(i).find(s=>s.g===g).f)); out.push('[end]','');
     });
   }else cur().filter(i=>i.on).forEach(i=>{ for(let k=0;k<i.freq;k++) out.push(i.path); });
   return out.join('\r\n');
@@ -192,7 +236,7 @@ function applyLang(){
 function setMode(m){
   mode=m; folderSel=''; $('#prev').hidden=true; $('#check').hidden=true;
   document.querySelectorAll('.modes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===m));
-  $('#likelyBox').hidden=m==='hum'; $('#newGrp').hidden=m!=='cars'; $('#autoGrp').hidden=m!=='cars'; $('#merge').hidden=m!=='cars'; $('#real').hidden=$('#mixSel').hidden=m!=='cars'; $('#sub').textContent=t('sub_'+m);
+  $('#likelyBox').hidden=m==='hum'; $('#newGrp').hidden=m!=='cars'; $('#autoGrp').hidden=m!=='cars'; $('#merge').hidden=m!=='cars'; $('#real').hidden=$('#mixSel').hidden=m!=='cars'; syncFm(); $('#sub').textContent=t('sub_'+m);
   render();
   if(rootList().length&&!S[m].scanned) scan(m);
 }
@@ -273,9 +317,9 @@ function donut(parts){
   return `<svg viewBox="0 0 140 140" width="140" height="140" role="img">${o}</svg>`;
 }
 function updShares(){
-  const items=cur(), cars=mode==='cars', n=i=>i.freq*(cars?gl(i).length:1), tot=items.filter(i=>i.on).reduce((a,i)=>a+n(i),0);
+  const items=cur(), cars=mode==='cars', n=i=>cars?slots(i).reduce((a,s)=>a+s.f,0):i.freq, tot=items.filter(i=>i.on).reduce((a,i)=>a+n(i),0);
   document.querySelectorAll('#out tbody tr').forEach(tr=>{
-    const c=tr.querySelector('.sh'), it=items[+tr.dataset.i]; if(!c||!it) return;
+    const c=tr.querySelector('.shv'), it=items[+tr.dataset.i]; if(!c||!it) return;
     c.textContent=it.on&&tot?(Math.round(n(it)*1000/tot)/10).toFixed(1)+' %':'';
   });
 }
@@ -283,15 +327,18 @@ function renderStats(){
   const box=$('#stats'), on=cur().filter(i=>i.on);
   updShares();
   if(!on.length){ box.hidden=true; return; }
-  const cars=mode==='cars', tot=on.reduce((a,i)=>a+i.freq*(cars?gl(i).length:1),0), miss=on.filter(i=>i.missing).length;
+  const cars=mode==='cars', n=i=>cars?slots(i).reduce((a,s)=>a+s.f,0):i.freq;
+  const tot=on.reduce((a,i)=>a+n(i),0), miss=on.filter(i=>i.missing).length;
   let h=`<b>${t('statsLine',{n:on.length,f:tot})}</b>`;
   if(cars){
-    const parts=[], rows=groups.map((g,k)=>{
+    const gs=groups.filter(g=>on.some(i=>gl(i).includes(g))), soll=gpVals(gs), parts=[];
+    const rows=groups.map((g,k)=>{
       const l=on.filter(i=>gl(i).includes(g)); if(!l.length) return '';
-      const f=l.reduce((a,i)=>a+i.freq,0), p=Math.round(f*1000/tot)/10, c=PAL[k%PAL.length]; parts.push({v:f,c});
-      return `<tr><td><span class="dot" style="background:${c}"></span>${esc(g)}</td><td>${l.length}</td><td>${f}</td><td class="pct"><span style="width:${p}%"></span></td><td>${p}%</td></tr>`;
+      const f=l.reduce((a,i)=>a+slots(i).find(s=>s.g===g).f,0), p=Math.round(f*1000/tot)/10, c=PAL[k%PAL.length]; parts.push({v:f,c});
+      return `<tr><td><span class="dot" style="background:${c}"></span>${esc(g)}</td><td>${l.length}</td><td>${f}</td><td class="gpc"><input type="number" class="gp" data-g="${esc(g)}" min="0" max="100" step="0.5" value="${soll[g]}"></td><td class="pct"><span style="width:${p}%"></span></td><td>${p}%</td></tr>`;
     }).join('');
-    h+=`<div class="sw"><table><thead><tr><th>${t('thGroup')}</th><th>${t('thCnt')}</th><th>${t('thSum')}</th><th colspan="2">${t('thShare')}</th></tr></thead><tbody>${rows}</tbody></table><div id="chart">${donut(parts)}</div></div>`;
+    h+=`<div class="sw"><table><thead><tr><th>${t('thGroup')}</th><th>${t('thCnt')}</th><th>${t('thSum')}</th><th class="gpc">${t('thSoll')}</th><th colspan="2">${t('thShare')}</th></tr></thead><tbody>${rows}</tbody></table><div id="chart">${donut(parts)}</div></div>`;
+    if(cfg.freqMode==='pct') h+=`<p class="gpc" style="color:var(--mute);margin:6px 0 0">${t('mixSum',{s:Object.values(soll).reduce((a,b)=>a+b,0).toFixed(1)})}</p>`;
     if(S.cars.dups) h+=`<p class="w">${t('warnDup',{n:S.cars.dups})}</p>`;
   }
   if(miss) h+=`<p class="w">${t('warnMissing',{n:miss})} <button id="rmMiss">${t('rmMissing')}</button></p>`;
@@ -328,20 +375,21 @@ async function doMerge(){
 
 /* ---------- Auswahl speichern / laden ---------- */
 async function saveSel(){
-  const pick=m=>S[m].items.filter(i=>i.on).map(i=>m==='cars'?{p:i.path,g:i.group,g2:i.group2||'',g3:i.group3||'',f:i.freq}:{p:i.path,f:i.freq});
-  const o={app:'omsi2-listen',v:1,groups,cars:pick('cars'),park:pick('park'),hum:pick('hum')};
+  const pick=m=>S[m].items.filter(i=>i.on).map(i=>m==='cars'?{p:i.path,g:i.group,g2:i.group2||'',g3:i.group3||'',f:i.freq,f2:i.freq2,f3:i.freq3,w:i.w}:{p:i.path,f:i.freq});
+  const o={app:'omsi2-listen',v:1,groups,gp:cfg.gp||{},cars:pick('cars'),park:pick('park'),hum:pick('hum')};
   const r=await omsi.saveFile({defaultName:'omsi2_auswahl.json',data:new TextEncoder().encode(JSON.stringify(o,null,1)),filters:[{name:'JSON',extensions:['json']}]});
   if(r) status(t('selSaved',{n:o.cars.length+o.park.length+o.hum.length}));
 }
 function loadSelObj(o){
   if(!o||o.app!=='omsi2-listen') throw 0;
   (o.groups||[]).forEach(g=>{ if(typeof g==='string'&&g&&!groups.includes(g)) groups.push(g); });
+  if(o.gp&&typeof o.gp==='object') setCfg('gp',{...cfg.gp,...o.gp});
   let n=0;
   for(const m of ['cars','park','hum']) (o[m]||[]).forEach(e=>{
     if(!e||typeof e.p!=='string') return;
     const items=S[m].items, it=items.find(x=>x.path.toLowerCase()===e.p.toLowerCase()), g=e.g||groups[0], fr=Math.max(1,parseInt(e.f)||1);
-    if(it){ it.on=true; it.group=g; it.group2=e.g2||''; it.group3=e.g3||''; it.freq=fr; it.manual=true; }
-    else items.push({path:e.p,on:true,group:g,group2:e.g2||'',group3:e.g3||'',freq:fr,missing:!!S[m].scanned,manual:true});
+    if(it){ it.on=true; it.group=g; it.group2=e.g2||''; it.group3=e.g3||''; it.freq=fr; it.freq2=e.f2; it.freq3=e.f3; it.w=e.w; it.manual=true; }
+    else items.push({path:e.p,on:true,group:g,group2:e.g2||'',group3:e.g3||'',freq:fr,freq2:e.f2,freq3:e.f3,w:e.w,missing:!!S[m].scanned,manual:true});
     n++;
   });
   render(); status(t('selLoaded',{n}));
@@ -416,13 +464,13 @@ const MIX={
   rural:{NormalCars:84,Commercials:6,Trucks:8,SpecialCars:1.5,Ambulance:.5},
   ind:{NormalCars:70,Commercials:14,Trucks:14,SpecialCars:1.5,Ambulance:.5}
 };
-function allocate(list,mix){
+function allocate(list,mix,wtf){
   const gs=[...new Set(list.map(i=>i.group))], sh={}; gs.forEach(g=>sh[g]=mix[g]??2);
-  const shT=gs.reduce((a,g)=>a+sh[g],0), wt=i=>i.group==='SpecialCars'&&/taxi/i.test(i.path)?6:1;
+  const shT=gs.reduce((a,g)=>a+sh[g],0)||1, wt=wtf||(i=>i.group==='SpecialCars'&&/taxi/i.test(i.path)?6:1);
   const calc=(T,clamp)=>{
     const r=new Map(); let ok=true;
-    gs.forEach(g=>{ const l=list.filter(i=>i.group===g), W=l.reduce((a,i)=>a+wt(i),0);
-      l.forEach(i=>{ let v=sh[g]===0?1:Math.round(T*sh[g]/shT*wt(i)/W); if(clamp) v=Math.min(999,Math.max(1,v)); else if(v<1||v>999) ok=false; r.set(i,v); }); });
+    gs.forEach(g=>{ const l=list.filter(i=>i.group===g), W=l.reduce((a,i)=>a+wt(i),0)||1;
+      l.forEach(i=>{ const z=sh[g]===0||!wt(i); let v=z?1:Math.round(T*sh[g]/shT*wt(i)/W); if(clamp) v=Math.min(999,Math.max(1,v)); else if(!z&&(v<1||v>999)) ok=false; r.set(i,v); }); });
     return ok?r:null;
   };
   let r=null; for(let T=100;T<=3000&&!r;T+=50) r=calc(T,false);
@@ -432,16 +480,41 @@ function realistic(){
   const on=cur().filter(i=>i.on); if(!on.length) return;
   if(!confirm(t('realConfirm'))) return;
   if(new Set(on.map(i=>i.group)).size===1) autoGroups();
-  allocate(on,getMix($('#mixSel').value)).forEach((v,i)=>i.freq=v);
+  const entries=[]; on.forEach(i=>slots(i).forEach((s,k)=>entries.push({it:i,k,group:s.g,path:i.path})));
+  const mx=getMix($('#mixSel').value);
+  if(cfg.freqMode==='pct'){
+    const gs=[...new Set(entries.map(e=>e.group))], tt=gs.reduce((a,g)=>a+(mx[g]??2),0)||1, gp={};
+    gs.forEach(g=>gp[g]=Math.round((mx[g]??2)*1000/tt)/10); setCfg('gp',{...cfg.gp,...gp});
+    render(); status(t('realDone',{n:on.length})); return;
+  }
+  allocate(entries,mx).forEach((v,e)=>{ e.it[FK[e.k]]=v; });
   render(); status(t('realDone',{n:on.length}));
 }
 $('#real').onclick=realistic;
 /* ---------- Einstellungen ---------- */
 const setCfg=(k,v)=>{ cfg[k]=v; omsi.setSetting(k,v); };
+const PRESETS={
+  dark:{bg:'#14181e',panel:'#1c222b',ink:'#e6e9ee',mute:'#8d97a6',line:'#2f3744',acc:'#4aa3da',warn:'#f0a35e'},
+  light:{bg:'#f3f4f6',panel:'#ffffff',ink:'#1c2430',mute:'#667085',line:'#d9dde3',acc:'#0b5d8f',warn:'#b54708'},
+  yellow:{bg:'#16181c',panel:'#20242a',ink:'#f2f2f2',mute:'#a3a8b0',line:'#363c45',acc:'#f2b705',warn:'#ff7a59'},
+  contrast:{bg:'#000000',panel:'#0a0a0a',ink:'#ffffff',mute:'#d0d0d0',line:'#ffffff',acc:'#ffe600',warn:'#ff8a3d'},
+  green:{bg:'#0f1a14',panel:'#16251c',ink:'#e8f3ec',mute:'#8fb09b',line:'#25402f',acc:'#3ecf7a',warn:'#f0a35e'}
+};
+const PREK={dark:'preDark',light:'preLight',yellow:'preYellow',contrast:'preContrast',green:'preGreen'};
+const COLS=['bg','panel','ink','mute','line','acc','warn'], COLK={bg:'colBg',panel:'colPanel',ink:'colInk',mute:'colMute',line:'colLine',acc:'colAcc',warn:'colWarn'};
+const lum=h=>{ const [r,g,b]=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(c=>c<=.03928?c/12.92:((c+.055)/1.055)**2.4); return .2126*r+.7152*g+.0722*b; };
+const contrast=(a,b)=>{ const [x,y]=[lum(a),lum(b)].sort((p,q)=>q-p); return (x+.05)/(y+.05); };
+const inkOn=h=>lum(h)>.45?'#0b1117':'#ffffff';
 function applyLook(){
-  const r=document.documentElement;
+  const r=document.documentElement, s=r.style;
+  [...COLS.map(k=>'--'+k),'--acc-ink','color-scheme'].forEach(k=>s.removeProperty(k));
   if(cfg.theme==='system') r.removeAttribute('data-theme'); else r.setAttribute('data-theme',cfg.theme);
+  if(cfg.theme==='custom'){
+    const c={...PRESETS.dark,...cfg.colors}; COLS.forEach(k=>s.setProperty('--'+k,c[k]));
+    s.setProperty('--acc-ink',inkOn(c.acc)); s.setProperty('color-scheme',lum(c.bg)<.4?'dark':'light');
+  }
   document.body.classList.toggle('nochart',!cfg.showChart);
+  document.body.classList.toggle('pctmode',cfg.freqMode==='pct'&&mode==='cars');
   omsi.setZoom(cfg.zoom/100);
 }
 const mixKeys=()=>Object.keys(cfg.mixes||{});
@@ -464,10 +537,12 @@ function openMixEd(name){
   mixSum();
 }
 function showPaths(){ $('#pOmsi').textContent=roots.omsi||t('notSet'); $('#pOpen').textContent=roots.open||t('notSet'); }
-function openSettings(){
+function fillSettingsUI(){
   showPaths(); $('#themeSel').value=cfg.theme; $('#zoomR').value=cfg.zoom; $('#zoomO').textContent=cfg.zoom+' %';
-  $('#chartChk').checked=!!cfg.showChart; fillMixEd(); $('#mixEd').hidden=true; $('#setDlg').showModal();
+  $('#chartChk').checked=!!cfg.showChart; $('#fmSet').value=cfg.freqMode; $('#colBox').hidden=cfg.theme!=='custom';
+  fillColUI(); fillMixEd(); $('#mixEd').hidden=true;
 }
+function openSettings(){ fillSettingsUI(); $('#setDlg').showModal(); }
 async function setRoot(key,cfgKey,clear){
   const p=clear?'':await omsi.pickFolder(roots[key]); if(p===null||p===undefined) return;
   roots[key]=p; omsi.setSetting(cfgKey,p); showPaths(); showRoot(); resetScans();
@@ -476,7 +551,7 @@ async function setRoot(key,cfgKey,clear){
 $('#settingsBtn').onclick=openSettings; $('#setX').onclick=()=>$('#setDlg').close();
 $('#bOmsi').onclick=()=>setRoot('omsi','omsiPath'); $('#cOmsi').onclick=()=>setRoot('omsi','omsiPath',true);
 $('#bOpen').onclick=()=>setRoot('open','openOmsiPath'); $('#cOpen').onclick=()=>setRoot('open','openOmsiPath',true);
-$('#themeSel').onchange=e=>{ setCfg('theme',e.target.value); applyLook(); };
+$('#themeSel').onchange=e=>{ setCfg('theme',e.target.value); $('#colBox').hidden=e.target.value!=='custom'; applyLook(); };
 $('#zoomR').oninput=e=>{ cfg.zoom=+e.target.value; $('#zoomO').textContent=cfg.zoom+' %'; omsi.setZoom(cfg.zoom/100); };
 $('#zoomR').onchange=()=>setCfg('zoom',cfg.zoom);
 $('#chartChk').onchange=e=>{ setCfg('showChart',e.target.checked); applyLook(); };
@@ -493,13 +568,63 @@ $('#mixDel').onclick=()=>{
   const o=$('#mixName').dataset.orig; if(!o) return;
   const mixes={...cfg.mixes}; delete mixes[o]; setCfg('mixes',mixes); fillMixSel(); fillMixEd(); $('#mixEd').hidden=true;
 };
+/* ---------- Farben, Prozent-Schalter, Sichern, Info ---------- */
+function colInfo(){ const c={...PRESETS.dark,...cfg.colors}, r=contrast(c.ink,c.bg); $('#colWarn').textContent=t(r<4.5?'colLow':'colOk',{c:r.toFixed(1)}); }
+function fillColUI(){
+  const c={...PRESETS.dark,...cfg.colors};
+  $('#colGrid').innerHTML=COLS.map(k=>`<div class="frow"><span>${t(COLK[k])}</span><input type="color" data-k="${k}" value="${c[k]}"></div>`).join('');
+  $('#colPreset').innerHTML=`<option value="">${t('prePick')}</option>`+Object.keys(PRESETS).map(k=>`<option value="${k}">${t(PREK[k])}</option>`).join('');
+  colInfo();
+}
+$('#colGrid').addEventListener('input',e=>{ const k=e.target.dataset.k; if(!k) return; cfg.colors={...cfg.colors,[k]:e.target.value}; applyLook(); colInfo(); });
+$('#colGrid').addEventListener('change',()=>setCfg('colors',cfg.colors));
+$('#colPreset').onchange=e=>{ const p=PRESETS[e.target.value]; if(!p) return; setCfg('colors',{...p}); applyLook(); fillColUI(); };
+$('#colReset').onclick=()=>{ setCfg('colors',{...PRESETS.dark}); applyLook(); fillColUI(); };
+function syncFm(){
+  $('#fmSel').value=cfg.freqMode; $('#fmSet').value=cfg.freqMode; $('#fmBox').hidden=mode!=='cars';
+  document.body.classList.toggle('pctmode',cfg.freqMode==='pct'&&mode==='cars');
+}
+function setFm(v){ setCfg('freqMode',v==='pct'?'pct':'num'); syncFm(); render(); }
+$('#fmSel').onchange=e=>setFm(e.target.value); $('#fmSet').onchange=e=>setFm(e.target.value);
+async function expSettings(){
+  const o={app:'omsi2-einstellungen',v:1,lang,omsiPath:roots.omsi,openOmsiPath:roots.open,cfg};
+  const r=await omsi.saveFile({defaultName:'omsi2_einstellungen.json',data:new TextEncoder().encode(JSON.stringify(o,null,1)),filters:[{name:'JSON',extensions:['json']}]});
+  if(r) status(t('setExported'));
+}
+async function impSettings(){
+  const f=await omsi.openFile({title:t('impSet'),filters:[{name:'JSON',extensions:['json']}]}); if(!f) return;
+  try{
+    const o=JSON.parse(new TextDecoder().decode(f.bytes)); if(!o||o.app!=='omsi2-einstellungen') throw 0;
+    const c=o.cfg||{}, ok=(k,fn)=>{ if(c[k]!==undefined&&fn(c[k])) setCfg(k,c[k]); };
+    ok('theme',v=>['system','light','dark','custom'].includes(v)); ok('zoom',v=>typeof v==='number'&&v>=50&&v<=200);
+    ok('showChart',v=>typeof v==='boolean'); ok('freqMode',v=>v==='num'||v==='pct');
+    ok('mixes',v=>v&&typeof v==='object'); ok('gp',v=>v&&typeof v==='object');
+    ok('colors',v=>v&&typeof v==='object'&&Object.values(v).every(x=>/^#[0-9a-f]{6}$/i.test(x)));
+    if(typeof o.omsiPath==='string'){ roots.omsi=o.omsiPath; omsi.setSetting('omsiPath',o.omsiPath); }
+    if(typeof o.openOmsiPath==='string'){ roots.open=o.openOmsiPath; omsi.setSetting('openOmsiPath',o.openOmsiPath); }
+    if(L[o.lang]){ lang=o.lang; try{ localStorage.setItem('omsiLang',lang); }catch(e){} }
+    applyLook(); showRoot(); fillMixSel(); applyLang(); fillSettingsUI(); syncFm(); resetScans(); if(rootList().length) scan(mode);
+    status(t('setImported'));
+  }catch(e){ status(t('setBad'),true); }
+}
+$('#expSet').onclick=expSettings; $('#impSet').onclick=impSettings;
+$('#clrCache').onclick=async()=>{ await omsi.clearCache(); resetScans(); if(rootList().length) scan(mode); };
+omsi.onProgress(d=>{ const p=$('#prog'); p.hidden=false; p.max=d.total; p.value=d.done; status(t('scanning')+' '+d.done+'/'+d.total); });
+async function openInfo(){
+  let v='?'; try{ v=await omsi.version(); }catch(e){}
+  $('#infoVer').textContent=t('infoVer',{v});
+  $('#infoGuide').innerHTML=t('infoGuide').split('|').map(x=>`<li>${esc(x)}</li>`).join('');
+  $('#infoLog').innerHTML=t('infoLog').split('|').map(x=>`<li>${esc(x)}</li>`).join('');
+  $('#infoDlg').showModal();
+}
+$('#infoBtn').onclick=openInfo; $('#infoX').onclick=()=>$('#infoDlg').close();
 applyLang(); setMode('cars');
 (async()=>{
   try{
     const st=await omsi.getSettings();
     roots.omsi=st.omsiPath||''; roots.open=st.openOmsiPath||'';
-    for(const k of ['theme','zoom','showChart','mixes']) if(st[k]!==undefined) cfg[k]=st[k];
-    applyLook(); fillMixSel(); showRoot();
+    for(const k of ['theme','zoom','showChart','mixes','colors','freqMode','gp']) if(st[k]!==undefined) cfg[k]=st[k];
+    applyLook(); fillMixSel(); showRoot(); syncFm();
     if(rootList().length) await scan(mode); else openSettings();
   }catch(e){}
 })();

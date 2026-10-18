@@ -28,11 +28,27 @@ ipcMain.handle('dialog:folder', async (e, start) => {
   return r.canceled ? null : r.filePaths[0];
 });
 
-ipcMain.handle('omsi:scan', (e, roots, dir, extSrc) => {
+const cacheFile = () => path.join(app.getPath('userData'), 'scan-cache.json');
+let cache = null;
+const getCache = () => {
+  if (!cache) { try { cache = JSON.parse(fs.readFileSync(cacheFile(), 'utf8')); } catch (e) { cache = null; } }
+  if (!cache || cache.v !== 1 || typeof cache.e !== 'object') cache = { v: 1, e: {} };
+  return cache.e;
+};
+
+ipcMain.handle('omsi:scan', async (e, roots, dir, extSrc) => {
   const list = (Array.isArray(roots) ? roots : [roots]).filter(r => typeof r === 'string' && r);
   if (!list.length || !['vehicles', 'humans'].includes(dir)) return { error: 'noFolder' };
-  return scanRoots(list, dir, new RegExp(String(extSrc), 'i'));
+  let last = 0;
+  const r = await scanRoots(list, dir, new RegExp(String(extSrc), 'i'), getCache(), (d, t) => {
+    const n = Date.now();
+    if (n - last > 60 || d === t) { last = n; e.sender.send('scan:progress', { done: d, total: t }); }
+  });
+  try { fs.writeFileSync(cacheFile(), JSON.stringify(cache)); } catch (x) {}
+  return r;
 });
+ipcMain.handle('cache:clear', () => { cache = { v: 1, e: {} }; try { fs.unlinkSync(cacheFile()); } catch (e) {} return true; });
+ipcMain.handle('app:version', () => app.getVersion());
 
 ipcMain.handle('ui:zoom', (e, f) => { if (win) win.webContents.setZoomFactor(Math.min(2, Math.max(0.5, Number(f) || 1))); return true; });
 

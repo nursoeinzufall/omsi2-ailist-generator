@@ -11,7 +11,7 @@
 <header>
   <div class="top">
     <h1 data-t="title"></h1>
-    <div class="tr"><button id="settingsBtn" data-t="settings"></button><label class="chk"><span data-t="lang"></span><select id="lang"></select></label></div>
+    <div class="tr"><button id="infoBtn" data-t="info"></button><button id="settingsBtn" data-t="settings"></button><label class="chk"><span data-t="lang"></span><select id="lang"></select></label></div>
   </div>
   <div class="modes" role="group">
     <button data-mode="cars" data-t="mode_cars"></button>
@@ -43,8 +43,10 @@
   <button id="chk" data-t="chkBtn"></button>
   <select id="mixSel"></select>
   <button id="real" data-t="real"></button>
+  <span id="fmBox"><label class="chk"><span data-t="fmLbl"></span><select id="fmSel"><option value="num" data-t="fmNum"></option><option value="pct" data-t="fmPct"></option></select></label></span>
 </div>
 <div id="status"></div>
+<div id="scanRow"><progress id="prog" hidden></progress><span id="scanInfo"></span></div>
 <section id="stats" hidden></section>
 <section id="check" hidden></section>
 <main><div id="out" class="empty"></div></main>
@@ -57,9 +59,15 @@
 <div class="frow"><span data-t="fOpen"></span><code id="pOpen"></code><button id="bOpen" data-t="choose"></button><button id="cOpen" data-t="clear"></button></div>
 <div class="frow"><span></span><small data-t="setHint"></small></div>
 <h3 data-t="setLook"></h3>
-<div class="frow"><span data-t="theme"></span><select id="themeSel"><option value="system" data-t="thSystem"></option><option value="light" data-t="thLight"></option><option value="dark" data-t="thDark"></option></select></div>
+<div class="frow"><span data-t="theme"></span><select id="themeSel"><option value="system" data-t="thSystem"></option><option value="light" data-t="thLight"></option><option value="dark" data-t="thDark"></option><option value="custom" data-t="thCustom"></option></select></div>
+<div id="colBox" hidden>
+  <div class="frow"><span data-t="colPreset"></span><select id="colPreset"></select><button id="colReset" data-t="colReset"></button></div>
+  <div id="colGrid"></div>
+  <div class="frow"><span></span><small id="colWarn"></small></div>
+</div>
 <div class="frow"><span data-t="zoom"></span><input type="range" id="zoomR" min="80" max="160" step="5"><output id="zoomO"></output></div>
 <div class="frow"><span></span><label class="chk"><input type="checkbox" id="chartChk"> <span data-t="showChart"></span></label></div>
+<div class="frow"><span data-t="freqMode"></span><select id="fmSet"><option value="num" data-t="fmNum"></option><option value="pct" data-t="fmPct"></option></select></div>
 <h3 data-t="setMix"></h3>
 <div class="frow"><select id="mixEdSel"></select><button id="mixNew" data-t="mixNew"></button></div>
 <div id="mixEd" hidden>
@@ -68,7 +76,17 @@
   <div class="frow"><span></span><output id="mixSumO" style="text-align:left"></output></div>
   <div class="frow"><button class="main" id="mixSave" data-t="mixSave"></button><button id="mixDel" data-t="mixDel"></button></div>
 </div>
+<h3 data-t="setData"></h3>
+<div class="frow"><button id="expSet" data-t="expSet"></button><button id="impSet" data-t="impSet"></button><button id="clrCache" data-t="clrCache"></button></div>
 </dialog>
+<dialog id="infoDlg">
+<div class="dhead"><b data-t="infoTitle"></b><button id="infoX">✕</button></div>
+<p><b data-t="title"></b> · <span id="infoVer"></span></p>
+<h3 data-t="infoGuideH"></h3><ul id="infoGuide"></ul>
+<h3 data-t="infoLogH"></h3><ul id="infoLog"></ul>
+<p style="margin-top:16px;color:var(--mute)" data-t="infoBy"></p>
+</dialog>
+<div id="ribbon"><span>made by Claude and NurSoEinZufall</span></div>
 <dialog id="grpDlg"><form method="dialog"><label><span id="grpLbl"></span><br><input type="text" id="grpIn" autocomplete="off"></label>
 <p><button class="main" value="ok">OK</button> <button value="x" formnovalidate>✕</button></p></form></dialog>
 <script src="app.js"></script>

@@ -1,7 +1,7 @@
 {
   "name": "omsi2-listen-generator",
   "productName": "OMSI 2 Listen-Generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Listen-Generator fuer OMSI 2: KI-Autos, Parklisten, KI-Menschen",
   "author": "OMSI Listen-Generator",
   "main": "main.js",

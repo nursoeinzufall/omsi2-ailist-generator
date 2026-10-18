@@ -24,7 +24,7 @@ label.chk{display:flex;gap:6px;align-items:center;color:var(--mute)}
 .sp{flex:1}
 #status{padding:10px 24px;color:var(--mute);min-height:42px}
 #status.err{color:var(--warn)}
-main{padding:0 24px 40px}
+main{padding:0 24px 200px}
 table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
 th{font-weight:600;color:var(--mute);font-size:13px}
@@ -36,7 +36,7 @@ tr.on td{background:color-mix(in srgb,var(--acc) 9%,transparent)}
 .empty{padding:40px;text-align:center;color:var(--mute);background:var(--panel);border:1px dashed var(--line);border-radius:8px}
 tbody tr{cursor:pointer}
 tr.sel td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
-#prev{position:fixed;right:16px;bottom:16px;width:min(300px,calc(100vw - 32px));background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px;z-index:20}
+#prev{position:fixed;right:228px;bottom:16px;width:min(300px,calc(100vw - 32px));background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px;z-index:20}
 #prev img{display:block;width:100%;max-height:220px;object-fit:contain;background:var(--bg);border-radius:4px}
 #prev .cap{font:12px ui-monospace,Consolas,monospace;color:var(--mute);word-break:break-all;margin:8px 0 0}
 #prev button{position:absolute;top:6px;right:6px;padding:0 8px;line-height:22px;z-index:1}
@@ -68,4 +68,19 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
 .sw{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
 td.sh{color:var(--mute);white-space:nowrap}
-.nochart #chart,.nochart .sh{display:none}
+.nochart #chart,.nochart .shv{display:none}
+body.nochart:not(.pctmode) .sh{display:none}
+.bar2 .chk{margin-left:4px}
+#scanRow{padding:0 24px;display:flex;gap:12px;align-items:center;color:var(--mute);font-size:13px;min-height:6px}
+#prog{width:240px;height:8px}
+body:not(.pctmode) .vp,body:not(.pctmode) .gpc{display:none}
+.vp,.gp{width:68px}
+input[readonly]{opacity:.65}
+td.num input+input{margin-left:6px}
+input[type=color]{width:46px;height:30px;padding:0;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+#colGrid .frow{margin:3px 0}
+#infoDlg{width:min(620px,92vw);max-height:88vh;overflow:auto}
+#infoDlg ul{margin:6px 0 0;padding-left:20px}
+#infoDlg li{margin:3px 0}
+#ribbon{position:fixed;right:0;bottom:0;width:210px;height:210px;overflow:hidden;pointer-events:none;z-index:30}
+#ribbon span{position:absolute;display:block;width:320px;right:-70px;bottom:79px;line-height:22px;text-align:center;transform:rotate(-45deg);background:var(--acc);color:var(--acc-ink);font-size:11.5px;font-weight:600;letter-spacing:.2px;box-shadow:0 2px 6px rgba(0,0,0,.35)}
